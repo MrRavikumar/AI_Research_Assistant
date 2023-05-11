@@ -1,0 +1,15 @@
+firebase_admin
+request
+bs4
+json
+flask_cors
+numpy
+base64
+urllib
+PyPDF2
+Pillow
+tensorflow
+tensorflow_hub
+openai
+sklearn
+-e .
