@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v5.8.0, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.8.0, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>SearchPaper</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap-grid.min.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap-reboot.min.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/dropdownstyle.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/sociconstyles.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/themestyle.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mbr-additional.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/searchpaper.css') }}" />
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/searchpaper.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+
+  
+</head>
+<body>
+
+
+  <section data-bs-version="5.1" class="menu menu1 cid-txeIHjqhSj" once="menu" id="menu1-7">
+    
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7" href="/">AI Research Assistant</a></span>
+            </div>
+        </div>
+    </nav>
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  
+<script src="assets/smoothscroll/smooth-scroll.js"></script>  
+<script src="assets/ytplayer/index.js"></script>  
+<script src="assets/dropdown/js/navbar-dropdown.js"></script>  
+<script src="assets/theme/js/script.js"></script>  
+
+  
+<div class="searchField">
+
+    <div class="Heading_label">
+
+        <h2>Ask any Research Topic.</h2>
+
+    </div>
+
+    <div class="desclabel">
+
+        AI Research Assistant Search all Research Paper on your query!
+
+    </div>
+
+    <div class="InputBox">
+
+        <form class="flex w-full" action> 
+            <div class="dropdown">
+                <select id = "selected_option"  aria-label="Default select example">
+                    <option  selected>Select Domain</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Quantitative Biology">Quantitative Biology</option>
+                    <option value="Quantitative Finance">Quantitative Finance</option>
+                    <option value="Statistics">Statistics</option>
+                    <option value="Electrical Engineering and Systems Science">Electrical Engineering and Systems Science</option>
+                    <option value="Economics">Economics</option>
+                  </select>
+                  <div class="spacing"></div>
+            </div>
+
+            <div class="spacing">
+        
+            </div>
+
+            <div id="downshift-8-menu" role="listbox" aria-labelledby="downshift-8-label"></div>
+            <div class="chakra-input_group emotion-css-cache-4382v8" role="combobox" aria-haspopup="dialog" aria-owns="downshift-0-menu" aria-expanded="false" id="popover-trigger-7" aria-controls="popover-content-7"> 
+            <div class="inputspacing">
+            <input class="input_box chakra-input text-sm p1-14 bg-white h-14 text-base !shadow-[0_1px 1px_rgba(0,0,0,0.04),e_2px_10px_rgba(0,0,0,0.04)] pr-24 emotion-css-cache-wz11y1" placeholder aria-autocomplete="list" aria-controls="downshift-8-menu" aria-labelledby="downshift-8-label" autocomplete="off" id="paperTitle">
+             </div>
+            <div class="spacing"></div>    
+        </div>
+            <div class="spacing">
+        
+            </div>
+
+            <div class="dropdown">
+                <select id = "selected_base"  aria-label="Default select example">
+                    <option value="All fields" selected>All fields</option>
+                    <option value="Author">Author</option>
+                    <option value="Title">Title</option>
+                    <option value="Journal Reference">Journal Reference</option>
+                    <option value="Abstract">Abstract</option>
+                  </select>
+                  <div class="spacing"></div>
+            </div>
+
+            </form>
+ 
+    </div>
+    <div class="spacing">
+
+    </div>
+
+        
+    <div class="uploadlabel">
+
+        <button class="searchbutton" onclick="searchPaper()">Search</button>
+
+    </div>
+    <hr style="width:100%;text-align:left;margin-left:0">
+    
+    <div class="spacing">
+
+    </div>
+    <div class="desclabel">
+
+        AI Research Assistant Question Answering System Based on your PDF!
+
+    </div>
+    <div class="uploadlabel">
+
+        <a href="/chatbot"><button class="searchbutton_I" >Interact</button></a>
+
+    </div>
+
+
+</div>
+
+<div class ="tablebody">
+    <table id = "tbh">
+        <thead id = "paperhead">
+
+      </thead>
+      <tbody id="tabbody">
+
+      </tbody>
+      </table>
+</div>
+<script>
+        
+        let papers = []
+
+        function searchPaper(){
+        let paperTitle = String(document.getElementById("paperTitle").value)
+        let option = String(document.getElementById("selected_option").value)
+        let search_fact = String(document.getElementById("selected_base").value)
+        // let obj =  {}
+        // obj["title"] = paperTitle
+        fetch(`http://127.0.0.1:3000/scrape/${option}/${paperTitle}/${search_fact}`, {
+        method:"GET",
+        headers: {
+            "content-Type" : "application/json",
+            "Access-Control-Allow-Origin":"*"
+        },
+        })
+        .then((res)=>{
+        return res.json()
+        })
+        .then((data)=>{
+        // console.log(typeof(data))
+        papers = data[1]
+        document.getElementById("tabbody").innerHTML = "";
+        console.log(papers)
+        
+
+
+        th1 = document.createElement("th")
+        th1.append("Sr. No.")
+        th2 = document.createElement("th")
+        th2.append("Title.")
+        th3 = document.createElement("th")
+        th3.append("Abstract Summary")
+        th4 = document.createElement("th")
+        th4.append("Authors & Publication")
+        th5 = document.createElement("th")
+        th5.append("Link")
+        th6 = document.createElement("th")
+        th6.append("Insights")
+
+        tr1 = document.createElement("tr")
+        tr1.appendChild(th1);
+        tr1.appendChild(th2);
+        tr1.appendChild(th3);
+        tr1.appendChild(th4);
+        tr1.appendChild(th5);
+        tr1.appendChild(th6);
+
+        thead = document.getElementById("paperhead")
+        thead.appendChild(tr1)
+
+        
+        papers.forEach((element,index)=>{
+            // console.log(element)
+        idtd = document.createElement("td");
+        idtd.append(index + 1);
+
+        titletd = document.createElement("td");
+        titletd.append(element[0]);
+        titletd.id = "Title_Val"
+
+        snippettd = document.createElement("td");
+        snippettd.append(element[2]);
+
+        publicationtd = document.createElement("td");
+        publicationtd.append(element[1]);
+
+        linktd = document.createElement("td");
+        a = document.createElement("a")
+        a.href = element[3]
+        a.append(element[3])
+        linktd.append(a);
+
+        insighttd = document.createElement("td");
+        insightbtn = document.createElement("button");
+        insightbtn.style.borderColor =  "brown";
+        insightbtn.style.borderRadius = "30px";
+        insightbtn.style.width = "100px";
+        insightbtn.value = a;
+        insightbtn.id = "insight";
+
+        let newlink = element[3].replaceAll('/','_')
+        href_insightbtn = document.createElement('a')
+        href_insightbtn.href = `/getknowledge/${newlink}/${element[0]}`
+        href_insightbtn.appendChild(insightbtn)
+        // insightbtn.addEventListener("click", ()=>{
+        //     getKnowlege(element[3], element[0]);
+        // })
+        // insightbtn.href = '/insight'
+        insightbtn.append("Get Knowlege!")
+        insighttd.appendChild(href_insightbtn)
+
+        // updateicon = document.createElement("i");
+        // updateicon.className = "fa-solid fa-pen-clip update";
+
+        // deleteicon = document.createElement("i");
+        // deleteicon.className = "fa-solid fa-trash-can delete";
+        // deleteicon.addEventListener("click",function(){
+        //     console.log("Inside event");
+        //     deleteProduct(element.id);
+        // })
+
+        // actiontd = document.createElement("td");
+        // actiontd.appendChild(updateicon);
+        // actiontd.appendChild(deleteicon);
+
+
+        tr = document.createElement("tr");
+        tr.appendChild(idtd);
+        tr.appendChild(titletd);
+        tr.appendChild(snippettd);
+        tr.appendChild(publicationtd);
+        tr.appendChild(linktd);
+        tr.appendChild(insighttd);
+
+        
+
+        tbody = document.getElementById("tabbody");
+        tbody.appendChild(tr)
+
+        t = document.getElementById("tbh");
+        t.appendChild(thead)
+        t.appendChild(tbody)
+
+        })
+
+
+    })
+        // .catch((e)=>{
+        // console.log(e)
+        // })
+
+
+
+    }
+
+    function  getKnowlege(link, title)
+    {
+
+        // let link = String(document.getElementById("insight").value);
+        // let title = String(document.getElementById("Title_Val").innerText);
+        console.log(title)
+        console.log(link)
+        let newlink = link.replaceAll('/','_')
+        fetch(`http://127.0.0.1:3000/insight/${newlink}/${title}`, {
+        method:"GET",
+        headers: {
+            // "content-Type" : "application/json",
+            "Access-Control-Allow-Origin":"*"
+        },
+        })
+        .then((res)=>{
+            // return res.text()
+        })
+        // .then((data)=>{
+        //     // console.log(data)
+        //     document.body.innerHTML = data;
+        // })
+        
+        
+
+        // document.getElementById("popcnt").style.display = "flex"
+        
+    }
+//     function  getKnowledge(link, title) {
+//     console.log(title)
+//     console.log(link)
+//     let newlink = link.replaceAll('/','_')
+//     fetch(`http://127.0.0.1:3000/getknowledge/${newlink}/${title}`, {
+//         method: "GET",
+//         headers: {
+//             "Access-Control-Allow-Origin": "*"
+//         },
+//     })
+//     .then((res)=>{
+//         return res.text()
+//     })
+//     .then((data)=>{
+//         document.body.innerHTML = data
+//     })
+// }
+
+
+</script>  
+</body>
+</html>

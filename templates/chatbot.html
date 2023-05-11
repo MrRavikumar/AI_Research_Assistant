@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Interaction</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap-grid.min.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap-reboot.min.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/dropdownstyle.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/sociconstyles.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/themestyle.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mbr-additional.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/chatbot.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/searchpaper.css') }}" />
+
+</head>
+
+<body>
+  <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg" id = "nav_color">
+    <div class="container">
+        <div class="navbar-brand">
+            
+            <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7" href="/">AI Research Assistant</a></span>
+        </div>
+    </div>
+</nav>
+
+<div class="spacing">
+                  
+</div>
+<div class="spacing">
+                  
+</div>
+<div class="spacing">
+                  
+</div>
+<div class="spacing">
+                  
+</div>
+<div class="spacing">
+                  
+</div>
+<div class="spacing">
+        
+</div>
+<div class="searchUploadField">
+  <h1 class = "heading_upload">PDF Based Answering System!</h1>
+  <div class = "fileupload">
+  <!-- {{ url_for('upload_file') }} -->
+  <form method="POST"   enctype="multipart/form-data" action="/chatbot">
+    <!-- <input type="file" name="files">
+    <input type="submit" value="Upload"> -->
+    <label class="form-label" for="customFile">Upload Research Paper PDF:</label>
+    <input type="file" name= 'files' class="form-control" id="customFile" />
+    <input type="submit" class="form-control" value="Upload"> 
+  </form>
+  </div>
+  <div class = "fileupload">
+    {% if filename %}
+    <br><br>
+    <p>You Uploaded :</p>
+      <p>File name: {{ filename }}</p>
+    {% endif %}
+  </div>
+</div>
+<hr style="width:100%;text-align:left;margin-left:0">
+<div class = "searchChatField">
+  <h1>Chat&#128220;Box</h1>
+  <div class = "chatwindow" id="chatbox"></div>
+  <form id="message-form">
+    <input type="text" class = "QueryInput" id="message-input">
+    <button type="submit" class="searchbutton_I">Send</button>
+  </form>
+</div>
+  
+
+  <script>
+    $(function() {
+      var $chatbox = $('#chatbox');
+      var $form = $('#message-form');
+      var $input = $('#message-input');
+
+      function addMessage(message, sender) {
+        var $message = $('<div class="message">');
+        $message.addClass(sender);
+        $message.text(message);
+        $chatbox.append($message);
+        $chatbox.scrollTop($chatbox.prop('scrollHeight'));
+      }
+
+      $form.submit(function(e) {
+        e.preventDefault();
+        var message = $input.val();
+        $input.val('');
+
+        addMessage(message, 'user');
+
+        $.ajax({
+          url: '/actualchatbot',
+          method: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({ message: message }),
+          success: function(response) {
+            addMessage(response.message, 'bot');
+          },
+          error: function() {
+            addMessage('Sorry, there was an error processing your request.', 'bot');
+          }
+        });
+      });
+    });
+  </script>
+
+
+<script src="{{ url_for('static', filename='F:/AI_Research_Assistant_/static/script.js')}}"></script>
+</body>
+
+</html>
