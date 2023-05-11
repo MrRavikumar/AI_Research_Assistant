@@ -1,0 +1,151 @@
+.searchField{
+
+    height: 500px;
+    width: 400px;
+    display: flex;
+    row-gap: 10px;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15%;
+
+}
+
+.Heading_label{
+
+    height: 50;
+    width: 100%;
+    text-align: center;
+
+
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 1px;
+    background-color: black;
+    color: black;
+  } 
+
+
+.desclabel{
+
+    height: 50px;
+    width: 100%;
+    text-align: center;
+
+
+}
+
+.spacing{
+    padding-top: 10px;
+}
+
+.InputBox{
+
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.uploadlabel{
+    height: 50px;
+    width: 40px;
+    text-align: center;
+    color: bisque;
+
+}
+
+.input_box{
+    width: 80%;
+    height: 20%;
+}
+
+.searchbutton{
+    border-radius: 30px;
+    border-color: brown;
+    
+}
+.searchbutton_I{
+    border-radius: 30px;
+    border-color: brown;
+    width: 80px;
+    
+}
+
+.tablebody{
+
+    width: 90%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+table td {
+    padding: 0.5rem;
+    border: 5px solid rgb(3, 3, 3);
+}
+table th {
+    padding: 0.5rem;
+    border: 5px solid rgb(5, 5, 5);
+}
+
+table thead {
+    padding: 0.5rem;
+    border: 5px solid rgb(3, 3, 3);
+}
+table tbody {
+    padding: 0.5rem;
+    border: 5px solid rgb(5, 5, 5);
+}
+ 
+/* Removing all unwanted border
+from left hand side by calling
+all the elements in the first
+column and removing their left
+border*/
+table tr td:first-child, th:first-child{
+    border-left: none;
+}
+ 
+/* Removing all unwanted border
+from top of the table by calling
+all the elements in first row and
+removing their top border*/
+table tr:first-child th{
+    border-top: none;
+}
+ 
+/* Removing all unwanted border
+from right hand side by calling
+all the elements in last row and
+removing their right border*/
+table tr td:last-child, th:last-child{
+    border-right: none;
+}
+ 
+/* Removing all unwanted border
+from bottom of the table by
+calling all the elements in
+last column and removing their
+bottom border*/
+table tr:last-child td{
+    border-bottom: none;
+}
+
+
+

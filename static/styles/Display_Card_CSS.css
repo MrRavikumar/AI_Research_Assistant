@@ -1,0 +1,30 @@
+
+.title_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content_container{
+    display: flex;
+    
+    justify-content: space-between;
+}
+
+.img{
+   
+    width: 49%;
+
+}
+
+.summ{
+    
+    width: 49%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#nav_color{
+    background-color: white;
+}
